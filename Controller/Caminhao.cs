@@ -51,7 +51,7 @@ namespace Controller
         public static void AlterarCaminhao(
             string id,
             string placa,
-            string NomeMotorista
+            string motorista
         ) {
             int idConvert = 0;
             try {
@@ -61,7 +61,7 @@ namespace Controller
             }
             
             ValidaPlaca(placa);
-            Model.Caminhao.AlterarCaminhao(idConvert, placa, NomeMotorista);
+            Model.Caminhao.AlterarCaminhao(idConvert, placa, motorista);
         }
 
         public static void ExcluirCaminhao(string id)

@@ -1,39 +1,73 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Model;
+﻿namespace Principal
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Rastreio de Caminhões: ");
+            int op = 0;
+            do {
+                Console.WriteLine("1 - Cadastrar Rota");
+                Console.WriteLine("2 - Alterar Rota");
+                Console.WriteLine("3 - Excluir Rota");
+                Console.WriteLine("4 - Listar Rotas");
+                Console.WriteLine("5 - Cadastrar Caminhão");
+                Console.WriteLine("6 - Alterar Caminhão");
+                Console.WriteLine("7 - Excluir Caminhão");
+                Console.WriteLine("8 - Listar Caminhões");
+                Console.WriteLine("9 - Cadastrar Cidade");
+                Console.WriteLine("10 - Alterar Cidade");
+                Console.WriteLine("11 - Excluir Cidade");
+                Console.WriteLine("12 - Listar Cidades");
+                Console.WriteLine("0 - Sair");
+                Console.WriteLine("Opção:");
+                op = int.Parse(Console.ReadLine());
 
-namespace rotamvc{
-    public class Program{
-        public static void Main(string[] args){
-            List<Caminhao> caminhoes = new List<Caminhao>();
-            caminhoes.Add(new Caminhao(202301, "KLA-0944", "Lucas"));
-            caminhoes.Add(new Caminhao(202302, "NIW5H24", "Felipe"));
-            caminhoes.Add(new Caminhao(202303, "RLG8G20", "Carlos"));
-            caminhoes.Add(new Caminhao(202304, "NHJ9Y00", "Eduardo"));
-            caminhoes.Add(new Caminhao(202305, "RDS4D70", "Bruno"));
-            caminhoes.Add(new Caminhao(202306, "MVE7D17", "Fernando"));
-
-            IEnumerable<Caminhao> Volvo = from Caminhao in caminhoes
-                where Caminhao.NomeMotorista == "Felipe"
-                select Caminhao;
-
-            foreach(Caminhao caminhao in Volvo){
-                Console.WriteLine(caminhao.Id);
-                Console.WriteLine(caminhao.Placa);
-                Console.WriteLine(caminhao.NomeMotorista);
-            }    
-
-            Caminhao gol = (from Caminhao in caminhoes
-                            where Caminhao.NomeMotorista == "Felipe"
-                            select Caminhao).First();
-
-            int id = (from Caminhao in caminhoes
-                      where Caminhao.Id == 202302
-                      select Caminhao).Count();            
-
-        
-
+                switch (op) {
+                    case 0:
+                        Console.WriteLine("Saindo...");
+                        break;
+                    case 1:
+                        View.Rota.CadastrarRota();
+                        break;
+                    case 2:
+                        View.Rota.AlterarRota();
+                        break;
+                    case 3:
+                        View.Rota.ExcluirRota();
+                        break;
+                    case 4:
+                        View.Rota.ListarRotas();
+                        break;
+                    case 5:
+                        View.Caminhao.CadastrarCaminhao();
+                        break;
+                    case 6:
+                        View.Caminhao.AlterarCaminhao();
+                        break;
+                    case 7:
+                        View.Caminhao.ExcluirCaminhao();
+                        break;
+                    case 8:
+                        View.Caminhao.ListarCaminhoes();
+                        break;
+                    case 9:
+                        View.Cidade.CadastrarCidade();
+                        break;
+                    case 10:
+                        View.Cidade.AlterarCidade();
+                        break;
+                    case 11:
+                        View.Cidade.ExcluirCidade();
+                        break;
+                    case 12:
+                        View.Cidade.ListarCidades();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+            } while (op != 0);
         }
-    }    
+    }
 }

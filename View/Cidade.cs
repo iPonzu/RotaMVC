@@ -4,7 +4,7 @@ namespace View
     {
         public static void CadastrarCidade()
         {
-            Console.WriteLine("Digite o id da cidade:");
+            Console.WriteLine("Digite o ID da cidade:");
             string id = Console.ReadLine();
             Console.WriteLine("Digite o nome da cidade:");
             string nome = Console.ReadLine();
@@ -18,7 +18,7 @@ namespace View
 
         public static void AlterarCidade()
         {
-            Console.WriteLine("Digite o id da cidade:");
+            Console.WriteLine("Digite o ID da cidade:");
             string id = Console.ReadLine();
             Console.WriteLine("Digite o nome da cidade:");
             string nome = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace View
 
         public static void ExcluirCidade()
         {
-            Console.WriteLine("Digite o id da cidade:");
+            Console.WriteLine("Digite o ID da cidade:");
             string id = Console.ReadLine();
             try {
                 Controller.Cidade.ExcluirCidade(id);
