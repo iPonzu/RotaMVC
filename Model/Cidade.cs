@@ -8,7 +8,7 @@ namespace Model{
         public string Nome {get; set;}
 
         public static List<Cidade> Cidades{get; set;} = new List<Cidade>();
-
+        public int Id { get; internal set; }
 
         public Cidade (int idCidade, string nome)
         {

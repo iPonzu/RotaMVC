@@ -5,7 +5,7 @@ namespace View
         public static void CadastrarCaminhao()
         {
             Console.WriteLine("Cadastrar caminhão");
-            Console.WriteLine("Id:");
+            Console.WriteLine("ID:");
             string id = Console.ReadLine();
             Console.WriteLine("Placa:");
             string placa = Console.ReadLine();
@@ -22,7 +22,7 @@ namespace View
         public static void AlterarCaminhao()
         {
             Console.WriteLine("Alterar caminhão");
-            Console.WriteLine("Id:");
+            Console.WriteLine("ID:");
             string id = Console.ReadLine();
             Console.WriteLine("Placa:");
             string placa = Console.ReadLine();
@@ -39,7 +39,7 @@ namespace View
         public static void ExcluirCaminhao()
         {
             Console.WriteLine("Excluir caminhão");
-            Console.WriteLine("Id:");
+            Console.WriteLine("ID:");
             string id = Console.ReadLine();
             try {
                 Controller.Caminhao.ExcluirCaminhao(id);
