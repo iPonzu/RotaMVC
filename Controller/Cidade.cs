@@ -1,33 +1,52 @@
-using System;
+namespace Controller;
 
-namespace Controller{
-    public class Cidade{
-
-        public int idCidade {get; set;}
-
-        public string Nome {get; set;}
-
-        public static List<Cidade> Cidades{get; set;} = new List<Cidade>();
-
-
-        public Cidade (int IdCidade, string nome)
-        {
-            IdCidade = idCidade;
-            Nome = nome;
+public class Cidade
+{
+    public static void CadastrarCidade(string idCidade, string nome)
+    {
+        int idConvert = 0;
+        try{
+            idConvert = int.Parse(idCidade);
+        }catch(Exception){
+            throw new Exception ("Id inválido");
         }
-
-        public override string ToString()
-        {
-            return $"Id: {idCidade}, Nome: {Nome}";
+        Model.Cidade cidade = new Model.Cidade (idConvert, nome);
+    }   
+    
+    public static void AlterarCidade(string id, string nome) 
+    {
+        int idConvert = 0;
+        try{
+            idConvert = int.Parse(id);
+        }catch(Exception){
+            throw new Exception ("Id inválido");
         }
-
-        public static void AlterarCidade(
-        int idCidade, string nome)
-        {
-            Cidade cidade = BuscarCidade(idCidade);
-        }
-        public static BuscarCidade(            
-            )
+        Model.Cidade.AlterarCidade(idConvert, nome);
 
     }
+    public static void ExcluirCidade(string id)
+    {
+        int idConvert = 0;
+        try{
+            idConvert = int.Parse(id);
+        }catch(Exception){
+            throw new Exception ("Id inválido");
+        }
+        Model.Cidade.ExcluirCidade(idConvert);
+    }
+    public static Model.Cidade BuscarCidade(string id)
+    {
+        int idConvert = 0;
+        try{
+            idConvert = int.Parse(id);
+        }catch(Exception){
+            throw new Exception ("Id inválido");
+        }
+        return Model.Cidade.BuscarCidade(idConvert);
+    }
+    public static List<Model.Cidade> ListarCidades()
+    {
+        return Model.Cidade.Cidades;
+    }
+
 }
