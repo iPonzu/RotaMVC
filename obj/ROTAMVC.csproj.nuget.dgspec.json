@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joao_\\Documents\\ROTAMVC\\ROTAMVC.csproj": {}
+    "C:\\Users\\joao_\\Documents\\rotamvc\\rotamvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao_\\Documents\\ROTAMVC\\ROTAMVC.csproj": {
+    "C:\\Users\\joao_\\Documents\\rotamvc\\rotamvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao_\\Documents\\ROTAMVC\\ROTAMVC.csproj",
-        "projectName": "ROTAMVC",
-        "projectPath": "C:\\Users\\joao_\\Documents\\ROTAMVC\\ROTAMVC.csproj",
+        "projectUniqueName": "C:\\Users\\joao_\\Documents\\rotamvc\\rotamvc.csproj",
+        "projectName": "rotamvc",
+        "projectPath": "C:\\Users\\joao_\\Documents\\rotamvc\\rotamvc.csproj",
         "packagesPath": "C:\\Users\\joao_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao_\\Documents\\ROTAMVC\\obj\\",
+        "outputPath": "C:\\Users\\joao_\\Documents\\rotamvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joao_\\AppData\\Roaming\\NuGet\\NuGet.Config"

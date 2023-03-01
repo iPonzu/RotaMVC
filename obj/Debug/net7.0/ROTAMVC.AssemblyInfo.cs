@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ROTAMVC")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("rotamvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ROTAMVC")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ROTAMVC")]
+[assembly: System.Reflection.AssemblyProductAttribute("rotamvc")]
+[assembly: System.Reflection.AssemblyTitleAttribute("rotamvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

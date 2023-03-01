@@ -1,0 +1,15 @@
+C:\Users\joao_\Documents\rotamvc\bin\Debug\net7.0\rotamvc.exe
+C:\Users\joao_\Documents\rotamvc\bin\Debug\net7.0\rotamvc.deps.json
+C:\Users\joao_\Documents\rotamvc\bin\Debug\net7.0\rotamvc.runtimeconfig.json
+C:\Users\joao_\Documents\rotamvc\bin\Debug\net7.0\rotamvc.dll
+C:\Users\joao_\Documents\rotamvc\bin\Debug\net7.0\rotamvc.pdb
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.csproj.AssemblyReference.cache
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.AssemblyInfoInputs.cache
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.AssemblyInfo.cs
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.csproj.CoreCompileInputs.cache
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.dll
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\refint\rotamvc.dll
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.pdb
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\rotamvc.genruntimeconfig.cache
+C:\Users\joao_\Documents\rotamvc\obj\Debug\net7.0\ref\rotamvc.dll
