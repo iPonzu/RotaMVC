@@ -2,7 +2,7 @@ namespace Controller;
 
 public class Cidade
 {
-    public static void CadastrarCidade(string idCidade, string nome)
+    public static void CadastrarCidade(string idCidade, string nome) //
     {
         int idConvert = 0;
         try{

@@ -1,3 +1,4 @@
+// entradas de strings e dados que serão extraídos do model
 namespace Controller{
     public class Rota{
         public static void CadastrarRota(
@@ -5,33 +6,36 @@ namespace Controller{
             string origemId,
             string destinoId,
             string caminhaoId,
-            string data
+            string data,
+            string valor
         )
         {
             int idConvert = 0;
             try{
-                idConvert = int.Parse(id);
+                idConvert = Int32.Parse(id);
             } catch (Exception){
                 throw new Exception("ID da Rota inválido.");
             }
-            int origemIdConvert = 0;
+        /*   int origemIdConvert = 0;
             try{
-                origemIdConvert = int.Parse(origemId);  
+                origemIdConvert = Int32.Parse(origemId);  
             } catch (Exception){
                 throw new Exception("ID inválido.");
-            }
-            Model.Cidade origem = Model.Cidade.BuscarCidade(origemIdConvert);
-            Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
-            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
+            }*/
+            Model.Cidade origem = Model.Cidade.BuscarCidade(Int32.Parse(origemId));
+            Model.Cidade destino = Model.Cidade.BuscarCidade(Int32.Parse(destinoId));
+            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(Int32.Parse(caminhaoId));
             DateTime dataConvert = DateTime.Parse(data);
-            Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert);
+            Double valorConvert = double.Parse(valor);
+            Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert, valorConvert);
         }
         public static void AlterarRota(
             string id,
             string origemId,
             string destinoId,
             string caminhaoId,
-            string data
+            string data,
+            double valor
         )
         {
             int idConvert = 0;
@@ -44,7 +48,7 @@ namespace Controller{
             Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
             Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
             DateTime dataConvert = DateTime.Parse(data);
-            Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert);
+            Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert, valor);
         }
 
         public static Model.Rota BuscarRota(string id)
@@ -66,7 +70,8 @@ namespace Controller{
             IEnumerable<Model.Rota> rotas = from rota in Model.Rota.Rotas
                 join origem in Model.Cidade.Cidades on rota.Origem.Id equals origem.Id
                 join destino in Model.Cidade.Cidades on rota.Destino.Id equals destino.Id
-                join caminhao in Model.Caminhao.Caminhoes on rota.Caminhao.Id equals caminhao.Id
+                join caminhao in Model.Caminhao.Caminhoes on rota.Caminhao.IdCaminhao equals caminhao.IdCaminhao
+                
                 select rota;
 
                 foreach(Model.Rota rota in rotas){
@@ -82,6 +87,7 @@ namespace Controller{
                 throw new Exception("ID inválido.");
             }
         }
+        
 
     }
 }

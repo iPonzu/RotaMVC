@@ -1,3 +1,6 @@
+
+// código onde será cadastrado as informações no output
+
 namespace View
 {
     public class Rota
@@ -14,8 +17,10 @@ namespace View
             string caminhaoId = Console.ReadLine();
             Console.WriteLine("Data:");
             string data = Console.ReadLine();
+            Console.WriteLine("Valor da rota: ");
+            string valor = Console.ReadLine();
             try {
-                Controller.Rota.CadastrarRota(id, origemId, destinoId, caminhaoId, data);
+                Controller.Rota.CadastrarRota(id, origemId, destinoId, caminhaoId, data, valor);
                 Console.WriteLine("Rota cadastrada com sucesso");
             } catch (Exception e) {
                 Console.WriteLine(e.Message);
@@ -34,8 +39,11 @@ namespace View
             string caminhaoId = Console.ReadLine();
             Console.WriteLine("Data:");
             string data = Console.ReadLine();
+            Console.WriteLine("Valor da rota: ");
+            double valor = 1234.56;
+            string valorString = valor.ToString(Console.ReadLine());
             try {
-                Controller.Rota.AlterarRota(id, origemId, destinoId, caminhaoId, data);
+                Controller.Rota.AlterarRota(id, origemId, destinoId, caminhaoId, data, valor);
                 Console.WriteLine("Rota alterada com sucesso");
             } catch (Exception e) {
                 Console.WriteLine(e.Message);

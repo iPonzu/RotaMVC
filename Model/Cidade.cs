@@ -1,4 +1,5 @@
 using System;
+// entrada de dados para o controller
 
 namespace Model{
     public class Cidade{

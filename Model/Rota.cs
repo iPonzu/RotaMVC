@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+// estrutura onde será montado as listas, strings e int's
 namespace Model
 {
     public class Rota
@@ -13,6 +14,8 @@ namespace Model
         private int _caminhaoId;
         public Caminhao Caminhao { get; set; }
         public DateTime Data { get; set; }
+        public double valor { get; set; }
+        private double _valor;
 
         public static List<Rota> Rotas { get; set; } = new List<Rota>();
 
@@ -21,7 +24,8 @@ namespace Model
             Cidade origem,
             Cidade destino,
             Caminhao caminhao,
-            DateTime data
+            DateTime data,
+            double valor
         )
         {
             Id = id;
@@ -30,15 +34,17 @@ namespace Model
             Destino = destino;
             _destinoId = destino.Id;
             Caminhao = caminhao;
-            _caminhaoId = caminhao.Id;
+            _caminhaoId = caminhao.IdCaminhao;
             Data = data;
+            _valor = valor;
+            
 
             Rotas.Add(this);
         }
 
         public override string ToString()
         {
-            return $"Id: {Id}, Origem: {Origem}, Destino: {Destino}, Caminhão: {Caminhao}, Data: {Data}";
+            return $"Id: {Id}, Origem: {Origem}, Destino: {Destino}, Caminhão: {Caminhao}, Data: {Data}, Valor da rota: {valor}";
         }
 
         public static void AlterarRota(
@@ -46,7 +52,8 @@ namespace Model
             Cidade origem,
             Cidade destino,
             Caminhao caminhao,
-            DateTime data
+            DateTime data,
+            double valor
         )
         {
             Rota rota = BuscarRota(id);
